@@ -2,7 +2,6 @@ name: Test workflow
 
 on: [workflow_dispatch]
 
-
 jobs:
   echo-name:
     environment: development
@@ -16,6 +15,5 @@ jobs:
       - name: Echo the name and release of the container
         run: |
           echo the release is $(cat /etc/*release)
-          echo the hostname is $(hostname)
       
   
