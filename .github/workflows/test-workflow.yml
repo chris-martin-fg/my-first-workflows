@@ -1,9 +1,6 @@
 name: Test workflow
 on: [workflow_dispatch]
 
-env:
-  Name: ${{ vars.name }}
-
 jobs:
   echo-name:
     runs-on: ubuntu-latest
