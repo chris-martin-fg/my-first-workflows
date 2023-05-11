@@ -1,6 +1,5 @@
 name: Test workflow
 
-
 on:
   workflow_dispatch:
     environment:
@@ -10,6 +9,7 @@ on:
 
 jobs:
   echo-name:
+    environment: development
     container: redhat/ubi8
     runs-on: ubuntu-latest
     steps:
@@ -17,6 +17,9 @@ jobs:
         run: |
           echo The environment is ${{ vars.ENV_NAME }},
           echo and the users name is ${{ vars.NAME }}.
-          
+      - name: Echo the name and release of the container
+        run: |
+          echo the release is $(cat /etc/*release)
+          echo the hostname is $(hostname)
       
   
