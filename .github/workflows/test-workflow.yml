@@ -2,9 +2,18 @@ name: Test workflow
 on: [workflow_dispatch]
 
 jobs:
-  echo-name:
+  echo-name-dev:
     runs-on: ubuntu-latest
     environment: development    
+    steps:
+      - name: Echo the users name
+        run: |
+          echo The environment is ${{ vars.ENV_NAME }},
+          echo and the users name is ${{ vars.NAME }}.
+          
+    echo-name-prd:
+    runs-on: ubuntu-latest
+    environment: production 
     steps:
       - name: Echo the users name
         run: |
