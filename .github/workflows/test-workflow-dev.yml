@@ -7,8 +7,8 @@ jobs:
     #container: redhat/ubi8
     runs-on: ubuntu-latest
     steps:
-      - name: Print the git repo
-        run: echo $GITHUB_WORKSPACE
+      - name: List the contents of the workspace
+        run: ls -al $GITHUB_WORKSPACE
       
       - name: Echo the users name
         run: |
@@ -19,11 +19,11 @@ jobs:
         run: |
           echo the release is $(cat /etc/*release)
 
-      - uses: kong/setup-deck@v1
-        with:
-          deck-version: 1.19.1
+      #- uses: kong/setup-deck@v1
+      #  with:
+      #    deck-version: 1.19.1
 
-      - name: Perform a deck dump
-        run: deck dump --kong-addr https://172.19.3.133:8444 --headers ""${{secrets.KONG_ADMIN_TOKEN}}"" --all-workspaces --tls-skip-verify
+      #- name: Perform a deck dump
+      #  run: deck dump --kong-addr https://172.19.3.133:8444 --headers ""${{secrets.KONG_ADMIN_TOKEN}}"" --all-workspaces --tls-skip-verify
       
   
