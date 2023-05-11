@@ -1,0 +1,16 @@
+name: Test workflow
+on: [workflow_dispatch]
+
+env:
+  Name: ${{ vars.name }}
+
+jobs:
+  echo-name:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Echo the users name
+        run: |
+          echo ${{ vars.name }}
+      
+  
