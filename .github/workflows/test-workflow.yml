@@ -1,10 +1,5 @@
 name: Test workflow
 on: [workflow_dispatch]
-  inputs:
-      GITHUB_ENVIRONMENT:
-        required: true
-        type: string
-        description: "Environment"
 
 env:
   Name: ${{ vars.name }}
