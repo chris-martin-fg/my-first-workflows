@@ -1,0 +1,15 @@
+name: Test workflow (production)
+
+on: [workflow_dispatch]
+
+jobs:
+  echo-name:
+    container: redhat/ubi8
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo some environment variables
+        uses: ./.github/workflows/test-workflow-dev.yml
+        with:
+          GITHUB_ENVIRONMENT: development
+      
+  
