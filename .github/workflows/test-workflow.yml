@@ -4,8 +4,7 @@ on: [workflow_dispatch]
 jobs:
   echo-name:
     runs-on: ubuntu-latest
-    environment: [ development, production]
-    
+    environment: development    
     steps:
       - name: Echo the users name
         run: |
