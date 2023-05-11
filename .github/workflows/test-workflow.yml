@@ -11,6 +11,6 @@ jobs:
     steps:
       - name: Echo the users name
         run: |
-          echo ${{ vars.name }}
+          echo "${{vars.name}}"
       
   
