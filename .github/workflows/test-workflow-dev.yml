@@ -11,8 +11,13 @@ jobs:
         run: |
           echo The environment is ${{ vars.ENV_NAME }},
           echo and the users name is ${{ vars.NAME }}.
+
       - name: Echo the name and release of the container
         run: |
           echo the release is $(cat /etc/*release)
+
+      - uses: kong/setup-deck@v1
+        with:
+          deck-version: 1.19.1
       
   
