@@ -1,4 +1,4 @@
-name: Test workflow
+name: Test workflow (production)
 
 on: [workflow_dispatch]
 
