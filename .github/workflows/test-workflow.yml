@@ -1,5 +1,6 @@
 name: Test workflow
-environment: development
+
+
 on:
   workflow_dispatch:
     environment:
@@ -9,6 +10,7 @@ on:
 
 jobs:
   echo-name:
+    container: redhat/ubi8
     runs-on: ubuntu-latest
     steps:
       - name: Echo the users name
