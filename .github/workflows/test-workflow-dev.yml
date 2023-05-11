@@ -1,16 +1,9 @@
 name: Test workflow (development)
 
-on: 
-  workflow_call:
-    inputs:
-      GITHUB_ENVIRONMENT:
-        required: true
-        type: string
-        description: "Environment"
-        
+on: [workflow_dispatch]
 jobs:
   echo-name:
-    environment: ${{inputs.GITHUB_ENVIRONMENT}}
+    environment: development
     container: redhat/ubi8
     runs-on: ubuntu-latest
     steps:
