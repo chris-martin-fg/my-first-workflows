@@ -7,8 +7,8 @@ jobs:
     #container: redhat/ubi8
     runs-on: ubuntu-latest
     steps:
-      - name: List the contents of the workspace
-        run: ls -al $GITHUB_WORKSPACE
+      - name: print the repository
+        run: echo ${{github.repository}}
       
       - name: Echo the users name
         run: |
