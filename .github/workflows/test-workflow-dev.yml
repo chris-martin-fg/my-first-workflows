@@ -4,7 +4,7 @@ on: [workflow_dispatch]
 jobs:
   echo-name:
     environment: development
-    container: redhat/ubi8
+    #container: redhat/ubi8
     runs-on: ubuntu-latest
     steps:
       - uses: action/checkout@v3
